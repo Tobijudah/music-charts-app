@@ -8,7 +8,7 @@ class Musixmatch {
 
    async fetchData() {
       
-      const url = `http://api.musixmatch.com/ws/1.1/${this.chart}.get?apikey=${this.apiKey}&chart_name=top&page=1&page_size=${this.number}&country=${this.country}`
+      const url = `https://api.musixmatch.com/ws/1.1/${this.chart}.get?apikey=${this.apiKey}&chart_name=top&page=1&page_size=${this.number}&country=${this.country}`
 
       console.log(url);
    
@@ -18,7 +18,7 @@ class Musixmatch {
       console.log(typeof data, data);
       return data
 
-      
+
       
    }
 }
