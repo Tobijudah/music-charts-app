@@ -1,0 +1,107 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'DM Sans', sans-serif;
+   letter-spacing: 0.02rem;
+   color: #ff536e;
+  
+}
+
+body {
+   background: #fff7f8;
+}
+
+h1 {
+   font-size: 5rem;
+   font-family: 'Arapey', serif;
+   text-emphasis-color: #ff536e;
+}
+
+h2 {
+   font-size: 2.25rem;
+   font-family: 'Arapey', serif;
+}
+
+a {
+   text-decoration: none;
+}
+
+li {
+   list-style: none;
+   margin-bottom: 0.3rem;
+}
+
+form {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 2rem;
+}
+
+select, input {
+   height: 2.25rem;
+   border-radius: 0.3rem;
+   padding: 0.5rem;
+   background: #fff5f7;
+   border: 0.1px solid #c9c9c9;
+   margin-left: 0.5rem;
+}
+
+#number {
+   width: 75px;
+}
+
+#text {
+   display: flex;
+   justify-content: center;
+}
+
+.purple {
+   color: #341539;
+}
+
+.container {
+   width: 85%;
+   margin: 0 auto;
+}
+
+.lead {
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   margin-bottom: 0.25rem;
+}
+
+.sub {
+   color: #5c5c5c;
+}
+
+.header {
+   margin: 5rem 0;
+   text-align: center;
+}
+
+.card {
+   border-radius: 0.3rem;
+   padding: 1rem;
+   margin: 5rem 0;
+   background: #ffffff;
+}
+
+.card .heading {
+   margin: 1rem 0;
+}
+
+.card .track {
+   display: flex;
+   align-items: center;
+   margin-bottom: 1.25rem;
+}
+
+.card .track .text {
+   margin-left: 1rem;
+}
+
+.card .track .text .lead i {
+   margin-left: 0.5rem;
+}

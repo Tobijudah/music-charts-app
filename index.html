@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/styles.css">
+      <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+      <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+			integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+			crossorigin="anonymous"
+		/>
+      <title>Chartsssss.</title>
+   </head>
+
+   <body>
+      
+      <div class="container">
+
+         <div class="header">
+            <h1>Chartsssss<span class="purple">.</span></h1>
+         </div>
+
+         <div class="card">
+            <form>
+
+               <div class="input-group">
+                  <label for="number">Top:</label>
+                  <input class="purple" id="number" name="number" type="number" value="" min="1" max="100"/>
+               </div>
+
+               <div class="input-group">
+                  <label for="chart">Chart:</label>
+                  <select name="chart" id="chart" class="purple">
+                     <option value="chart.tracks">Songs</option>
+                     <option value="chart.artists">Artists</option>
+                  </select>
+               </div>
+
+               <div class="input-group">
+                  <label for="country">Country:</label>
+                  <select name="country" id="country" class="purple">
+                     <option value="us">United States</option>
+                     <option value="uk">United Kingdom</option>
+                     <option value="ng">Nigeria</option>
+                     <option value="ca">Canada</option>
+                     <option value="fr">France</option>
+                     <option value="XW">Worldwide</option>
+                     <!-- <option value=""></option>
+                     <option value=""></option>
+                     <option value=""></option> -->
+                  </select>
+               </div>
+
+               <input type="button" value="Search" id="btn">
+            </form>
+
+            <div id="text">
+               <p>Example: Top <span class="purple">10 </span><span class="purple">Artists</span> in <span class="purple">Nigeria</span></p>
+            </div>
+            
+         </div>
+         
+         <div class="card">
+            <h2 class="heading purple"></h2>
+
+            <ul class="list">
+
+               
+            </ul>
+         </div>
+        
+      </div>
+
+      <script src="js/musixmatch.js"></script>
+      <script src="js/ui.js"></script>
+      <script src="js/app.js"></script>
+   </body>
+
+</html>
