@@ -8,11 +8,12 @@ class Musixmatch {
 
    async fetchData() {
       
-      const url = `https://api.musixmatch.com/ws/1.1/${this.chart}.get?apikey=${this.apiKey}&chart_name=top&page=1&page_size=${this.number}&country=${this.country}`
+      const url = `https://floating-citadel-30831.herokuapp.com/https://api.musixmatch.com/ws/1.1/${this.chart}.get?apikey=${this.apiKey}&chart_name=top&page=1&page_size=${this.number}&country=${this.country}`
 
       console.log(url);
    
       const response = await fetch(url)
+      console.log(response);
 
       const data =  await response.json()
       console.log(typeof data, data);
