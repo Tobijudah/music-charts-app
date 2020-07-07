@@ -68,16 +68,19 @@ class UI {
       `
    }
 
-   alert(message) {
+   alert(message, highlightInputField) {
       const formCard = document.querySelector('.form')
       const parent = document.querySelector('.container')
       const alert = document.createElement('div')
       alert.classList = 'card alert'
-      const input = document.querySelector('#number')
+
+      if (highlightInputField === true) {
+         const input = document.querySelector('#number')
       input.classList.add('error')
+      }
 
       alert.innerHTML = `
-      <p>${message}</p>
+      <p><i class="fas fa-exclamation"></i> ${message}</p>
       `
 
       parent.insertBefore(alert, formCard)
@@ -86,6 +89,8 @@ class UI {
    clearAlert() {
       const alert = document.querySelector('.alert')
       alert.remove()
+      const input = document.querySelector('#number')
+      input.classList.remove('error')
    }
 } 
 

@@ -18,22 +18,22 @@ button.addEventListener('click', e => {
    }
 
    if (number <= 0 && number !== '') {
-      ui.alert("Hi, I don't think charts work like that. Please enter a positive number")
+      ui.alert("Hi, seems you entered a negative number. Please enter a positive number", true)
       return
    }
 
    if (number.indexOf(".") !== -1) {
-      ui.alert("Hi, it's kinda hard to work with decimals in charts. Please try a whole number")
+      ui.alert("Hi, it's kinda hard to work with decimals in charts. Please try a whole number", true)
       return
    }
 
    if (number > 100) {
-      ui.alert("Hi, unfortunately results are capped at 100 for now. Please try a lower number")
+      ui.alert("Hi, unfortunately results are capped at 100 for now. Please try a lower number", true)
       return
    }
 
    if (number.match(/\s/g) || number.match(/\./g)){
-      ui.alert('Username Cannot Have Spaces or Full Stops')
+      ui.alert('Username Cannot Have Spaces or Full Stops', true)
       return
   }
    
@@ -47,6 +47,12 @@ button.addEventListener('click', e => {
       if (chart === 'chart.artists') {
          ui.displayArtists(data.message.body.artist_list)
       }
+   })
+   .catch(error => {
+      ui.alert('An error occured please try again', false)
+      const list = document.querySelector('.list')
+      list.innerHTML = ''
+      return error
    })
    
    ui.updateHeader(number, chart, country)

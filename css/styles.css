@@ -121,12 +121,25 @@ select, input, #btn {
 }
 
 .alert {
-   border: 1px solid #c9c9c9;
+   border: 1px solid #e00b2b;
    font-weight: 500;
+   padding: 0.5rem;
+}
+
+.alert p {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #e00b2b;
+}
+
+.alert p i {
+   color: #e00b2b; 
+   margin-right: 0.75rem;
 }
 
 .error {
-   border: 2px solid #e00b2b
+   border: 1.5px solid #e00b2b
 }
 
 input:focus, select:focus, #btn:focus {
