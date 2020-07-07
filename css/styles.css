@@ -38,13 +38,18 @@ form {
    margin-bottom: 2rem;
 }
 
-select, input {
+select, input, #btn {
    height: 2.25rem;
    border-radius: 0.3rem;
    padding: 0.5rem;
-   background: #fff5f7;
+   background: #fff;
    border: 0.1px solid #c9c9c9;
    margin-left: 0.5rem;
+}
+
+select:hover {
+   height: 2.5rem;
+   transition: height 300ms;
 }
 
 #number {
@@ -82,7 +87,7 @@ select, input {
 }
 
 .card {
-   border-radius: 0.3rem;
+   border-radius: 0.5rem;
    padding: 1rem;
    margin: 5rem 0;
    background: #ffffff;
@@ -104,4 +109,47 @@ select, input {
 
 .card .track .text .lead i {
    margin-left: 0.5rem;
+}
+
+input:focus {
+   outline: none;
+   border: 1px solid #341539
+}
+
+
+@media (max-width: 500px) {
+   form {
+      flex-direction: column;
+   }
+
+   #btn {
+      margin: 0 0.5rem;
+      margin-top: 1.25rem;
+   }
+
+   .header {
+      margin: 3rem 0;
+   }
+
+   .input-group {
+      margin: 0.5rem;
+   }
+
+   .card {
+      margin: 2rem 0;
+   }
+
+   h1 {
+      font-size: 4rem;
+   }
+
+   h2 {
+      font-size: 2rem;
+   }
+
+   input, select {
+      width: 100% !important;
+      margin: 0;
+      margin-top: 0.25rem;
+   }
 }
