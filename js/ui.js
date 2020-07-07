@@ -73,6 +73,8 @@ class UI {
       const parent = document.querySelector('.container')
       const alert = document.createElement('div')
       alert.classList = 'card alert'
+      const input = document.querySelector('#number')
+      input.classList.add('error')
 
       alert.innerHTML = `
       <p>${message}</p>

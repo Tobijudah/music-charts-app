@@ -125,6 +125,10 @@ select, input, #btn {
    font-weight: 500;
 }
 
+.error {
+   border: 2px solid #e00b2b
+}
+
 input:focus, select:focus, #btn:focus {
    outline: none;
    border: 1px solid #341539
