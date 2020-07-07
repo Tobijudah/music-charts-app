@@ -50,11 +50,13 @@ class UI {
       const heading = document.querySelector('.heading')
       let chartType
       chart === 'chart.tracks' ? chartType = 'songs' : chartType = 'artists'
+      let num = parseInt(number)
+      isNaN(num) ? num = '' : num = num
 
-      heading.textContent = `Top ${number} ${chartType} (${country.toUpperCase()})`
+      heading.textContent = `Top ${num} ${chartType} (${country.toUpperCase()})`
    }
 
-   loadUI(){
+   loadUI() {
       const list = document.querySelector('.list')
 
       list.innerHTML = `
@@ -64,6 +66,24 @@ class UI {
          <div id="circle3" class="circle"></div>
       </div>
       `
+   }
+
+   alert(message) {
+      const formCard = document.querySelector('.form')
+      const parent = document.querySelector('.container')
+      const alert = document.createElement('div')
+      alert.classList = 'card alert'
+
+      alert.innerHTML = `
+      <p>${message}</p>
+      `
+
+      parent.insertBefore(alert, formCard)
+   }
+
+   clearAlert() {
+      const alert = document.querySelector('.alert')
+      alert.remove()
    }
 } 
 

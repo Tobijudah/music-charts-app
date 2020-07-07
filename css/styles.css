@@ -120,9 +120,9 @@ select, input, #btn {
    margin-left: 0.5rem;
 }
 
-.s {
-   display: flex;
-   
+.alert {
+   border: 1px solid #c9c9c9;
+   font-weight: 500;
 }
 
 input:focus, select:focus, #btn:focus {

@@ -18,9 +18,7 @@ class Musixmatch {
       const data =  await response.json()
       console.log(typeof data, data);
       return data
-
-
-      
+ 
    }
 }
 
