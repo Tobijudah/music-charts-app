@@ -9,7 +9,7 @@
 }
 
 body {
-   background: #fff7f8;
+   background: #fcf7f8;
 }
 
 h1 {
@@ -47,18 +47,24 @@ select, input, #btn {
    margin-left: 0.5rem;
 }
 
-select:hover {
+/* select:hover {
    height: 2.5rem;
    transition: height 300ms;
-}
+} */
 
 #number {
-   width: 75px;
+   width: 110px;
 }
 
 #text {
    display: flex;
    justify-content: center;
+   padding-top: 1rem;
+   border-top: 1px solid #c9c9c9;
+}
+
+#text .purple {
+   font-weight: 700;
 }
 
 .purple {
@@ -111,9 +117,38 @@ select:hover {
    margin-left: 0.5rem;
 }
 
-input:focus {
+input:focus, select:focus, #btn:focus {
    outline: none;
    border: 1px solid #341539
+}
+
+@media (min-width: 950px) {
+   #btn {
+      width: 100px;
+   }
+}
+
+
+@media (max-width: 950px) {
+   form {
+      flex-direction: column;
+   }
+
+   input, select {
+      width: 100% !important;
+      margin: 0;
+      margin-top: 0.25rem;
+   }
+
+   #btn {
+      margin: 0 0.5rem;
+      margin-top: 1.25rem;
+   }
+
+   .input-group {
+      margin: 0.5rem;
+   }
+
 }
 
 
