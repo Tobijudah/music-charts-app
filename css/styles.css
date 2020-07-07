@@ -15,12 +15,16 @@ body {
 h1 {
    font-size: 5rem;
    font-family: 'Arapey', serif;
-   text-emphasis-color: #ff536e;
+   line-height: 5rem;
 }
 
 h2 {
    font-size: 2.25rem;
    font-family: 'Arapey', serif;
+}
+
+h3 {
+   margin-top: 0;
 }
 
 a {
@@ -47,11 +51,6 @@ select, input, #btn {
    margin-left: 0.5rem;
 }
 
-/* select:hover {
-   height: 2.5rem;
-   transition: height 300ms;
-} */
-
 #number {
    width: 110px;
 }
@@ -61,6 +60,7 @@ select, input, #btn {
    justify-content: center;
    padding-top: 1rem;
    border-top: 1px solid #c9c9c9;
+   text-align: center;
 }
 
 #text .purple {
@@ -97,10 +97,13 @@ select, input, #btn {
    padding: 1rem;
    margin: 5rem 0;
    background: #ffffff;
+   height: 100%;
 }
 
 .card .heading {
    margin: 1rem 0;
+   padding: 1rem 0;
+   border-bottom: 1px solid #c9c9c9;
 }
 
 .card .track {
@@ -117,9 +120,132 @@ select, input, #btn {
    margin-left: 0.5rem;
 }
 
+.s {
+   display: flex;
+   
+}
+
 input:focus, select:focus, #btn:focus {
    outline: none;
    border: 1px solid #341539
+}
+
+#circles{
+	width:100%;
+   margin: 2rem auto;
+   height: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.circle{
+	background-color:rgb(255,83,110);
+	float:left;
+	height:56px;
+	margin:0 20px;
+	width:56px;
+	animation-name:bounce_circleG;
+		-o-animation-name:bounce_circleG;
+		-ms-animation-name:bounce_circleG;
+		-webkit-animation-name:bounce_circleG;
+		-moz-animation-name:bounce_circleG;
+	animation-duration:1.7575s;
+		-o-animation-duration:1.7575s;
+		-ms-animation-duration:1.7575s;
+		-webkit-animation-duration:1.7575s;
+		-moz-animation-duration:1.7575s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+	border-radius:37px;
+		-o-border-radius:37px;
+		-ms-border-radius:37px;
+		-webkit-border-radius:37px;
+		-moz-border-radius:37px;
+}
+
+#circle1{
+	animation-delay:0.3495s;
+		-o-animation-delay:0.3495s;
+		-ms-animation-delay:0.3495s;
+		-webkit-animation-delay:0.3495s;
+		-moz-animation-delay:0.3495s;
+}
+
+#circle2{
+	animation-delay:0.8155s;
+		-o-animation-delay:0.8155s;
+		-ms-animation-delay:0.8155s;
+		-webkit-animation-delay:0.8155s;
+		-moz-animation-delay:0.8155s;
+}
+
+#circle3{
+	animation-delay:1.0485s;
+		-o-animation-delay:1.0485s;
+		-ms-animation-delay:1.0485s;
+		-webkit-animation-delay:1.0485s;
+		-moz-animation-delay:1.0485s;
+}
+
+
+
+@keyframes bounce_circleG{
+	0%{}
+
+	50%{
+		background-color:rgb(52,21,57);
+	}
+
+	100%{}
+}
+
+@-o-keyframes bounce_circleG{
+	0%{}
+
+	50%{
+		background-color:rgb(52,21,57);
+	}
+
+	100%{}
+}
+
+@-ms-keyframes bounce_circleG{
+	0%{}
+
+	50%{
+		background-color:rgb(52,21,57);
+	}
+
+	100%{}
+}
+
+@-webkit-keyframes bounce_circleG{
+	0%{}
+
+	50%{
+		background-color:rgb(52,21,57);
+	}
+
+	100%{}
+}
+
+@-moz-keyframes bounce_circleG{
+	0%{}
+
+	50%{
+		background-color:rgb(52,21,57);
+	}
+
+	100%{}
 }
 
 @media (min-width: 950px) {
@@ -186,5 +312,11 @@ input:focus, select:focus, #btn:focus {
       width: 100% !important;
       margin: 0;
       margin-top: 0.25rem;
+   }
+
+   .circle {
+      width: 30px;
+      height: 30px;
+      margin:0 10px;
    }
 }

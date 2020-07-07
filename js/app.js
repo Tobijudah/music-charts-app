@@ -10,6 +10,8 @@ button.addEventListener('click', e => {
    let musixmatch = new Musixmatch(number, chart, country);
    let ui = new UI()
 
+   ui.loadUI()
+   
    console.log(number, chart, country)
 
    musixmatch.fetchData()
