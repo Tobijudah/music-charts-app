@@ -93,6 +93,7 @@ select, input, #btn {
 }
 
 .card {
+   position: relative;
    border-radius: 0.5rem;
    padding: 1rem;
    margin: 5rem 0;
@@ -140,6 +141,14 @@ select, input, #btn {
 
 .error {
    border: 1.5px solid #e00b2b
+}
+
+.top {
+   position: absolute;
+   top: 0.25rem;
+   right: 0.4rem;
+   font-size: 10px;
+   display: none;
 }
 
 input:focus, select:focus, #btn:focus {

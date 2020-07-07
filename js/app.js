@@ -47,6 +47,7 @@ button.addEventListener('click', e => {
       if (chart === 'chart.artists') {
          ui.displayArtists(data.message.body.artist_list)
       }
+      ui.updateHeader(number, chart, country)
    })
    .catch(error => {
       ui.alert('An error occured please try again', false)
@@ -55,6 +56,5 @@ button.addEventListener('click', e => {
       return error
    })
    
-   ui.updateHeader(number, chart, country)
 })
 

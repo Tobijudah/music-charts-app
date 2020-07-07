@@ -47,13 +47,17 @@ class UI {
    }
 
    updateHeader(number, chart, country) {
-      const heading = document.querySelector('.heading')
       let chartType
       chart === 'chart.tracks' ? chartType = 'songs' : chartType = 'artists'
+
       let num = parseInt(number)
       isNaN(num) ? num = '' : num = num
 
+      const heading = document.querySelector('.heading')
       heading.textContent = `Top ${num} ${chartType} (${country.toUpperCase()})`
+
+      const copy = document.querySelector('.top')
+      copy.style.display = 'block'
    }
 
    loadUI() {
