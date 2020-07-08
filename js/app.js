@@ -60,3 +60,9 @@ button.addEventListener('click', e => {
    
 })
 
+const modeBtn = document.querySelector('#mode-btn')
+
+modeBtn.addEventListener('click', e => {
+   ui = new UI()
+   ui.toggleUIMode()
+})

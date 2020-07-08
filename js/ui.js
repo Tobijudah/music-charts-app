@@ -106,5 +106,9 @@ class UI {
       const input = document.querySelector('#number')
       input.classList.remove('error')
    }
+
+   toggleUIMode() {
+      
+   }
 } 
 

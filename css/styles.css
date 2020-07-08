@@ -25,6 +25,7 @@ h2 {
 
 h3 {
    margin-top: 0;
+   font-family: 'Arapey', serif;
 }
 
 a {
@@ -58,6 +59,16 @@ select, input, #btn {
 select:hover, input:hover, #btn:hover {
    font-weight: 500;
    border: 1px solid #341539;
+}
+
+nav {
+   background: #34153909;
+}
+
+#navbar {
+   display: flex;
+   justify-content: space-between;
+   padding: 0.75rem 0;
 }
 
 #number {
@@ -187,6 +198,26 @@ input:focus, select:focus, #btn:focus {
 
 .fa-lg:hover {
   color: #341539e8;
+}
+
+.button-div {
+   display: none;
+}
+
+.button-div p {
+   line-height: 100%;
+   padding: 0.4rem 0.5rem;
+   border: 1px solid #341539;
+   border-radius: 0.5rem;
+   font-size: 13px;
+}
+
+.button-div p:hover {
+   cursor: pointer;
+}
+
+.button-div p i {
+   margin-right: 0.4rem;
 }
 
 #circles{
