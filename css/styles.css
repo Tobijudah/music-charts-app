@@ -31,6 +31,10 @@ a {
    text-decoration: none;
 }
 
+.list a:hover {
+   text-decoration: underline;
+}
+
 li {
    list-style: none;
    margin-bottom: 0.3rem;
@@ -49,6 +53,11 @@ select, input, #btn {
    background: #fff;
    border: 0.1px solid #c9c9c9;
    margin-left: 0.5rem;
+}
+
+select:hover, input:hover, #btn:hover {
+   font-weight: 500;
+   border: 1px solid #341539;
 }
 
 #number {

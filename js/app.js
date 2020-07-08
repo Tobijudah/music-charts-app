@@ -12,6 +12,8 @@ button.addEventListener('click', e => {
    
    console.log(number, chart, country)
 
+   ui.clearHeader()
+
    const alert = document.querySelector('.alert')
    if (alert !== null){
       ui.clearAlert()
@@ -41,13 +43,13 @@ button.addEventListener('click', e => {
 
    musixmatch.fetchData()
    .then(data => {
+      ui.updateHeader(number, chart, country)
       if (chart === 'chart.tracks') {
          ui.displayTracks(data.message.body.track_list)
       }
       if (chart === 'chart.artists') {
          ui.displayArtists(data.message.body.artist_list)
       }
-      ui.updateHeader(number, chart, country)
    })
    .catch(error => {
       ui.alert('An error occured please try again', false)

@@ -6,6 +6,11 @@ class UI {
       let output = ``
       let number = 1
 
+      if (tracklist == []) {
+         console.log('fdfd');
+         return
+      }
+
       tracklist.forEach(track => {
          output += `
             <div class="track">
@@ -58,6 +63,11 @@ class UI {
 
       const copy = document.querySelector('.top')
       copy.style.display = 'block'
+   }
+
+   clearHeader() {
+      const heading = document.querySelector('.heading')
+      heading.textContent = ''
    }
 
    loadUI() {
