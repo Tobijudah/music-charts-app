@@ -42,13 +42,13 @@ button.addEventListener('click', e => {
    ui.loadUI()
 
    musixmatch.fetchData()
-   .then(data => {
+   .then(({ body }) => {
       ui.updateHeader(number, chart, country)
       if (chart === 'chart.tracks') {
-         ui.displayTracks(data.message.body.track_list)
+         ui.displayTracks(body.message.body.track_list)
       }
       if (chart === 'chart.artists') {
-         ui.displayArtists(data.message.body.artist_list)
+         ui.displayArtists(body.message.body.artist_list)
       }
    })
    .catch(error => {

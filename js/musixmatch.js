@@ -7,13 +7,12 @@ class Musixmatch {
    }
 
    async fetchData() {
-      
-      const url = `https://floating-citadel-30831.herokuapp.com/https://api.musixmatch.com/ws/1.1/${this.chart}.get?apikey=${this.apiKey}&chart_name=top&page=1&page_size=${this.number}&country=${this.country}`
-
-      console.log(url);
    
       try {
-         const response = await fetch(url)
+         const response = await fetch('https://chartssss.vercel.app/api/musixmatch', {
+            method: 'POST',
+            body: JSON.stringify({ chart: this.chart.split('.')[1], country: this.country, number: this.number }),
+          })
          console.log(response);
 
          const data =  await response.json()
