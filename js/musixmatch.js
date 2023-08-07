@@ -8,7 +8,7 @@ class Musixmatch {
    async fetchData() {
    
       try {
-         const response = await fetch('api/musixmatch', {
+         const response = await fetch('/.netlify/functions/musixmatch', {
             method: 'POST',
             body: JSON.stringify({ chart: this.chart.split('.')[1], country: this.country, number: this.number }),
           })

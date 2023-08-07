@@ -42,7 +42,8 @@ button.addEventListener('click', e => {
    ui.loadUI()
 
    musixmatch.fetchData()
-   .then(({ body }) => {
+   .then((body) => {
+      console.log('format: ', body)
       ui.updateHeader(number, chart, country)
       if (chart === 'chart.tracks') {
          ui.displayTracks(body.message.body.track_list)

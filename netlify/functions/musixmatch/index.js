@@ -3,7 +3,7 @@ var requirejs = require('requirejs');
 require("dotenv").config();
 requirejs.config({ nodeRequire: require });
 
-export default async function handler({ body }, response) {
+exports.handler = async function ({ body }) {
   const { chart, country, number } = JSON.parse(body);
   const API_URL = 'https://api.musixmatch.com/ws/1.1/';
 
@@ -19,5 +19,5 @@ export default async function handler({ body }, response) {
 
   const data = await (await fetch(url)).json();
 
-  response.status(200).json({ body: data, params: JSON.parse(body) });
+  return { body: JSON.stringify(data), statusCode: 200, params: JSON.parse(body) };
 }
